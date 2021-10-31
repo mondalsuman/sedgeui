@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text-base: 255, 255, 255;
+    --color-text-muted: 199, 210, 254;
+    --color-text-inverted: 79, 70, 229;
+    --color-fill: 67, 56, 202;
+    --color-button-accent: 255, 255, 255;
+    --color-button-accent-hover: 238, 242, 255;
+    --color-button-muted: 99, 102, 241;
+  }
+  .theme-swiss {
+    --color-text-base: 255, 255, 255;
+    --color-text-muted: 254, 202, 202;
+    --color-text-inverted: 220, 38, 38;
+    --color-fill: 185, 28, 28;
+    --color-button-accent: 255, 255, 255;
+    --color-button-accent-hover: 254, 242, 242;
+    --color-button-muted: 239, 68, 68;
+  }
+  .theme-neon {
+    --color-text-base: 17, 24, 2;
+    --color-text-muted: 47, 67, 6;
+    --color-text-inverted: 235, 250, 204;
+    --color-fill: 179, 255, 23;
+    --color-button-accent: 36, 52, 3;
+    --color-button-accent-hover: 55, 79, 5;
+    --color-button-muted: 212, 255, 122;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-4 py-1 rounded-lg shadow-lg border
+     hover:-translate-y-0.5
+    transform transition
+    tracking-wide font-semibold text-sm sm:text-base
+  }
+
+  .btn-filled {
+    @apply bg-indigo-500 focus:outline-none
+    hover:bg-indigo-400 active:bg-indigo-600 text-white
+  }
+
+  .btn-outlined {
+    @apply border-indigo-500
+    hover:border-indigo-400 hover:text-indigo-400
+    active:border-indigo-600 text-indigo-500 active:text-indigo-600
+  }
+
+  .btn-outlined-primary {
+    @apply border-indigo-500
+    hover:border-indigo-400 hover:text-indigo-400
+    active:border-indigo-600 text-indigo-500 active:text-indigo-600
+  }
+
+  .btn-text {
+    @apply rounded-none border-none shadow-none
+    text-indigo-500 hover:text-indigo-400
+    active:text-indigo-600 
+  }
+  .btn-icon {
+    @apply inline-flex items-center
+  }
+}
+
